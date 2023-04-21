@@ -1,0 +1,15 @@
+th .icon {
+	height: 1.3rem;
+}
+
+.children-centered * {
+	text-align: center;
+}
+
+.gusts-span {
+	color: orangered;
+}
+
+.tr-outline {
+	border: solid 3px var(--primary);
+}

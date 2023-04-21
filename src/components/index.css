@@ -1,0 +1,89 @@
+/***** PICO CSS START *****/
+
+/* Light-blue Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+	--primary: #039be5;
+	--primary-hover: #0288d1;
+	--primary-focus: rgba(3, 155, 229, 0.125);
+	--primary-inverse: #fff;
+}
+
+/* Light-blue Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--primary: #039be5;
+		--primary-hover: #03a9f4;
+		--primary-focus: rgba(3, 155, 229, 0.25);
+		--primary-inverse: #fff;
+	}
+}
+
+/* Light-blue Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme='dark'] {
+	--primary: #039be5;
+	--primary-hover: #03a9f4;
+	--primary-focus: rgba(3, 155, 229, 0.25);
+	--primary-inverse: #fff;
+}
+
+/* Light-blue (Common styles) */
+:root {
+	--form-element-active-border-color: var(--primary);
+	--form-element-focus-color: var(--primary-focus);
+	--switch-color: var(--primary-inverse);
+	--switch-checked-background-color: var(--primary);
+}
+
+/***** PICO CSS END *****/
+
+.inline {
+	display: inline;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#icon-hog {
+	height: 1rem;
+}
+
+.nav-icon {
+	height: 2rem;
+}
+
+.padding-left-0 {
+	padding-left: 0;
+}
+
+nav > ul > li > a {
+	padding: 1px !important;
+	width: 3rem;
+}
+
+.active {
+	background-color: var(--primary-inverse);
+	color: var(--primary);
+	box-shadow: none;
+}
+
+.page-title {
+	margin-bottom: 18px;
+}
+
+/* TEST */
+#get-button {
+	position: fixed;
+	top: 4px;
+	left: 4px;
+	padding: 0;
+	width: 40px;
+	background-color: orangered;
+	border: 0;
+}
